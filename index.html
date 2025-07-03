@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Web Responsif</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            background-color: #3498db;
+            color: white;
+            margin: 0.5rem;
+        }
+
+        button:hover {
+            background-color: #000000;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 0.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            button {
+                width: 100%;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Halaman Web Responsif</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Selamat Datang!</h2>
+            <p>Klik tombol di bawah untuk mengubah warna latar belakang halaman.</p>
+            <div class="button-container">
+                <button id="blueBtn">Biru</button>
+                <button id="greenBtn">Hijau</button>
+                <button id="redBtn">Merah</button>
+            </div>
+        </section>
+    </main>
+    <script>
+        // Ambil elemen tombol menggunakan DOM
+        const blueBtn = document.getElementById('blueBtn');
+        const greenBtn = document.getElementById('greenBtn');
+        const redBtn = document.getElementById('redBtn');
+
+        // Tambahkan event listener untuk setiap tombol
+        blueBtn.addEventListener('click', () => {
+            document.body.style.backgroundColor = '#3498db';
+        });
+
+        greenBtn.addEventListener('click', () => {
+            document.body.style.backgroundColor = '#2ecc71';
+        });
+
+        redBtn.addEventListener('click', () => {
+            document.body.style.backgroundColor = '#e74c3c';
+        });
+    </script>
+</body>
+
+</html>
